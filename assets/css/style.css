@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 
 :root {
-    --primary-color: #E0B527;
+    --primary-color: #e0b527;
     --secondary-color: #C4C4C4;
     --background-color: #FFF;
     --text-color: #000;
-    --font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    --font-title: 'Oswald', comic;
+    --font-body: 'Inter', sans-serif;
 }
 
 * {
@@ -15,5 +17,143 @@
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-title);
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER */
+
+header {
+    nav {
+        background-color: var(--primary-color);
+        display: flex;
+        height: 6.25rem;
+        justify-content: space-between;
+        padding: 1.5rem 7.5rem;
+
+        #logo {
+            align-items: center;
+            background-color: var(--text-color);
+            display: flex;
+            height: 14rem;
+            justify-content: center;
+            width: 17.5rem;
+        }
+
+        #navLinks {
+            ul {
+                align-items: center;
+                display: flex;
+                gap: 3rem;
+
+                li {
+                    a {
+                        color: var(--text-color);
+                        font-family: var(--font-title);
+                        font-size: 2rem;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: var(--background-color);
+                            text-decoration: underline;
+                        }
+
+                        &:active {
+                            color: var(--background-color);
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* FOOTER */
+
+footer {
+    align-items: center;
+    background-color: var(--secondary-color);
+    display: flex;
+    height: 17rem;
+    justify-content: space-between;
+    padding: 0 8rem;
+    width: 100%;
+
+    #sitemap {
+        line-height: 2.5rem;
+
+        li {
+            a {
+                color: var(--text-color);
+                font-family: var(--font-body);
+                font-size: 1rem;
+                text-decoration: none;
+
+                &:hover {
+                    color: var(--primary-color);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    #location {
+        li {
+            h3 {
+                margin-bottom: .5rem;
+            }
+
+            p {
+                color: var(--text-color);
+                font-family: var(--font-body);
+                font-size: 1rem;
+
+                &:hover {
+                    color: var(--primary-color);
+                    text-decoration: underline;
+                }
+
+                a {
+                    color: var(--text-color);
+                    text-decoration: none;
+
+                    &:hover {
+                        color: var(--primary-color);
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    #socials {
+        display: flex;
+        gap: 3rem;
+        margin-top: 1rem;
+
+        li {
+            a {
+                color: var(--text-color);
+                font-size: 1.75rem;
+                text-decoration: none;
+
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
 }
