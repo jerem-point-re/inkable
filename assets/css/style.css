@@ -50,6 +50,7 @@ header {
             height: 14rem;
             justify-content: center;
             width: 17.5rem;
+            z-index: 1;
         }
 
         #navLinks {
@@ -69,11 +70,11 @@ header {
                             color: var(--background-color);
                             text-decoration: underline;
                         }
+                    }
 
-                        &:active {
-                            color: var(--background-color);
-                            font-weight: bold;
-                        }
+                    .active {
+                        color: var(--background-color);
+                        font-weight: bold;
                     }
                 }
             }
@@ -155,5 +156,62 @@ footer {
                 }
             }
         }
+    }
+}
+
+/* CONTACT PAGE */
+
+section h1 {
+    color: var(--primary-color);
+    font-family: var(--font-title);
+    font-size: 4rem;
+    margin: 3.5rem 0;
+    text-align: center;
+}
+
+#contactForm {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+    margin: 4rem 4rem;
+    padding: 0 2rem;
+    max-width: 100%;
+
+    label {
+        font-family: var(--font-body);
+        font-size: 1.25rem;
+        margin-bottom: .5rem;
+    }
+
+    input,
+    textarea {
+        border: none;
+        border-bottom: .15rem solid var(--text-color);
+        font-family: var(--font-body);
+        font-size: 1rem;
+        padding: .75rem;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        resize: none;
+
+        &:focus {
+            outline: none;
+            border-bottom: .15rem solid var(--primary-color);
+        }
+    }
+
+    button {
+        background-color: var(--primary-color);
+        border: none;
+        color: var(--background-color);
+        cursor: pointer;
+        font-family: var(--font-body);
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1.4rem 2.8rem;
+        text-align: center;
+        margin: 1rem auto;
+        display: block;
     }
 }
